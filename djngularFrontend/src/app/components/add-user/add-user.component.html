@@ -1,0 +1,55 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="firstName">First Name:-</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            required
+            [(ngModel)]="user.firstName"
+            name="firstName"
+          />
+        </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              required
+              [(ngModel)]="user.lastName"
+              name="lastName"
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              class="form-control"
+              id="age"
+              required
+              [(ngModel)]="user.age"
+              name="age"
+            />
+          </div>
+        <div class="form-group">
+          <label for="designation">Designation</label>
+          <input
+            type="text"
+            class="form-control"
+            id="designation"
+            required
+            [(ngModel)]="user.designation"
+            name="designation"
+          />
+        </div>
+        <button (click)="saveUser()" class="btn btn-success">Submit</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Tutorial was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newUser()">Add</button>
+      </div>
+    </div>
+  </div>

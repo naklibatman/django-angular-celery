@@ -1,0 +1,19 @@
+
+<div class="progress-bar-container">
+  <div class="progress-bar {{color}}" 
+   [ngStyle]="{'width': progress + '%'}">
+  </div>
+</div>
+
+<br>
+
+<button mat-button (click)="onDownloadClick()" [disabled] ="!buttonStatus">Download</button>
+
+<h1> {{httpdata.index}}</h1>
+
+<!-- <h1> {{taskHttpData.progress.current}}</h1>
+<h1> {{taskHttpData.progress.total}}</h1> -->
+<h1> {{taskHttpData.progress.percent}} %</h1>
+<h1> {{taskHttpData.result}}</h1>
+
+<router-outlet></router-outlet>
